@@ -1,0 +1,16 @@
+simulate the following 
+	Non prempting scheduling to calculate turn around time and waiting time.
+	FCFS,SJFS,ROUND ROBIN(premptive),priority
+
+	Simulate the following disk scheduling algorithms.
+	FCFS,SCAN,C-SCAN,
+
+	Implement the bankers algorithm or deadlock avoidance
+
+	simulate the following file orginisation techniques
+		single level directory
+		2 level directory 
+		heirarchical
+		implement the producer consumer problem using semaphores
+		WAP to simulate the working of the dining philosphers problem
+
