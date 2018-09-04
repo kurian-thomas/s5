@@ -1,6 +1,6 @@
 simulate the following 
 	Non prempting scheduling to calculate turn around time and waiting time.
-	FCFS,SJFS,ROUND ROBIN(premptive),priority
+	1.FCFS,2.SJFS,3.ROUND ROBIN(premptive),4.priority
 
 	Simulate the following disk scheduling algorithms.
 	FCFS,SCAN,C-SCAN,

@@ -1,36 +1,53 @@
 #include<stdio.h>
+//priority 
 
  struct prio{
- 	int burst_time,arival_time;
+ 	int burst_time,prio;
  }obj[20],temp1;
 
 int main(){
 
-	int temp,n,burst_time[20],turn_a_time[20],wait_time[20],i,j,quant,prio[20],name[20],r;
+	int temp,n,burst_time[20],turn_a_time[20],wait_time[20],i,j,quant,prio[20],name[20];
 
 	printf("\n enter total number of processes\n");
 	scanf("%d%*c",&n);
-	r=n;
 
 	for(i=0;i<n;i++){
 
 		printf("bust time for process[%d]",i+1);scanf("%d%*c",&obj[i].burst_time);
-		/*printf("\n");
+		printf("\n");
 		printf("prio for process[%d]",i+1);scanf("%d%*c",&obj[i].prio);
 		printf("\n");
-		*/
 		name[i]=i+1;
+		
 	}
-	printf("\nenter time quanta \n");
-	scanf("%d%*c",&quant);
+	for(i=0;i<n-1;i++)
+		for(j=i+1;j<n;j++){
+				if(obj[i].prio>obj[j].prio){
+						temp1=obj[i];
+						obj[i]=obj[j];
+						obj[j]=temp1;
 
-	for(i=0;r!=0;i++){
+						temp=name[i];
+						name[i]=name[j];
+						name[j]=temp;
 
-		printf("bust time for process[%d]: %d \n",i+1,obj[i].burst_time-quant);
+				}
+		}
 
-		if(i==n-1)
-			i=0;
-		r--;
-	}
+	wait_time[0]=0;
+	for(i=1;i<n;i++)
+    {
+        wait_time[i]=0;
+        for(j=0;j<i;j++)
+            wait_time[i]+=obj[i].burst_time;
+    }
+    printf("\n          \tburst time \t wait time \t turn around time");
+    for(i=0,j=0;i<n;i++,j++)
+    {
+        turn_a_time[i]=obj[i].burst_time+wait_time[i];
 
-}	
+        printf("\nProcess[%d]\t\t%d\t\t%d\t\t%d \n",name[j],obj[i].burst_time,wait_time[i],turn_a_time[i]);
+    }
+
+}    	

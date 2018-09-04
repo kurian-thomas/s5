@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+//fcfs
 int main(){
 
 	int n,burst_time[20],turn_a_time[20],wait_time[20],i,j;
