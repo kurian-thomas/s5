@@ -5,15 +5,15 @@ int main(){
 	int n,burst_time[20],turn_a_time[20],wait_time[20],i,j,temp,name[20];
 
 	printf("\n enter total number of processes\n");
-	scanf("%d%*c",&n);
+	scanf("%d%*c",&n);								//no of processers
 
-	for(i=0;i<n;i++){
+	for(i=0;i<n;i++){								//accepting burst time and name array for formatted o/p
 
 		printf("bust time for process[%d]",i+1);scanf("%d%*c",&burst_time[i]);
 		name[i]=i+1;
 	}
 
-	for(i=0;i<n-1;i++)
+	for(i=0;i<n-1;i++)					//sorting process accroding to lower burst time
 		for(j=i+1;j<n;j++){
 				if(burst_time[i]>burst_time[j]){
 						temp=burst_time[i];
@@ -27,12 +27,13 @@ int main(){
 		}
 	
 	wait_time[0]=0;
-	for(i=1;i<n;i++)
+	for(i=1;i<n;i++)					//calculating total wait time for each process 
     {
         wait_time[i]=0;
         for(j=0;j<i;j++)
             wait_time[i]+=burst_time[j];
     }
+    									//output 
     printf("\n          \tburst time \t wait time \t turn around time");
     for(i=0,j=0;i<n;i++,j++)
     {

@@ -1,0 +1,31 @@
+1)control structures using pnsql{
+	if,hen,else,
+	if,then,elseif
+	case statemtnt 
+	for loop 
+	while loop 
+
+	if cus id between 10 - 5 cs dept
+	case grade 
+	loop upto odd number 100
+	while even numbers
+}
+
+2)implimentation of procedures and funtions{
+	if credit greate than 5 laks plat
+	else silver 
+	gold 
+} 
+
+3)creation of db triggers and cursers 
+
+4)creation of package {
+	specification 
+	BODY
+}
+
+
+
+
+
+
