@@ -23,13 +23,13 @@ grade=(CASE
 
 
 
- CALL GetAll();
+ CALL Get();
 
 
 
 CALL l();
  DELIMITER //
-	CREATE PROCEDURE lpp()
+	CREATE PROCEDURE lpp1()
 		BEGIN
 		DECLARE to INT DEFAULT 0;
  		WHILE to < 100 
@@ -39,4 +39,4 @@ CALL l();
 		
 		END //	
 
-CALL lpp();
+CALL lpp1();
