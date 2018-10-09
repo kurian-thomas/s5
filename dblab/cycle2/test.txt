@@ -1,0 +1,22 @@
+DELIMITER //
+	CREATE PROCEDURE l1()
+		BEGIN
+
+		DECLARE tot INT DEFAULT 0;
+ 
+		SELECT COUNT(*) INTO tot
+		FROM 
+   		HUMAN;
+   		select tot;
+		END //	
+
+ DELIMITER //
+ CREATE PROCEDURE Get()
+   BEGIN
+   SELECT *  FROM HUMAN;
+   END //
+
+ DELIMITER ;
+
+CALL l1();
+CALL Get();

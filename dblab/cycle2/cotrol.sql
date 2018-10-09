@@ -21,4 +21,22 @@ grade=(CASE
 		ELSE 'B'
 		END);
 
-DECLARE VAL TYPE OF HUMAN.mark;
+
+
+ CALL GetAll();
+
+
+
+CALL l();
+ DELIMITER //
+	CREATE PROCEDURE lpp()
+		BEGIN
+		DECLARE to INT DEFAULT 0;
+ 		WHILE to < 100 
+ 		BEGIN
+ 		select to;
+ 		SET to=to+2;
+		
+		END //	
+
+CALL lpp();

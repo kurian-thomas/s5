@@ -1,0 +1,3 @@
+CREATE DEFINER=`root`@`localhost` TRIGGER tri
+AFTER INSERT ON HU FOR EACH ROW 
+UPDATE id SET id= id+9;

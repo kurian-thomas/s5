@@ -1,0 +1,15 @@
+
+CREATE TABLE pro (id INT, name VARCHAR(10));
+INSERT INTO pro VALUES(1, 'kurian'),(2, 'Augustine');
+
+
+
+DELIMITER //
+
+CREATE PROCEDURE pp(IN i INT)
+BEGIN
+SELECT * FROM pro ;
+END //
+
+
+CALL pp(4) //
